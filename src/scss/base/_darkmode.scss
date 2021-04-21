@@ -1,0 +1,29 @@
+
+//este estilo es para colocar el darkmode
+.dark-mode{// esta clase se agrega o se quita en el body segun lo puesto en el javascript 
+    background-color: darken($grisOscuro,10);
+    
+    p,h2{
+        color: $blanco;
+    }
+    a,h1,h3,h4{
+        color: $gris;
+    }
+    .anuncio{
+        background-color: $grisOscuro;
+        border: 1px solid $grisOscuro;
+        .precio{
+            color: $verde;
+        }
+    }
+    .iconos{
+        filter: invert(100%);
+    }
+    .imagen-contacto h2,.cambio{
+        color: $blanco;
+    }
+    .texto-nosotros blockquote{
+        color: $blanco;
+    }
+    
+}

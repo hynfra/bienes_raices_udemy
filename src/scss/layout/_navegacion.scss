@@ -1,0 +1,72 @@
+.derecha{
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        align-items: flex-end;
+    }
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        filter:invert(100%);// invierte el color que tenga aplicado, en este caso de negro pasa a blanco
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+            margin: 0;
+        }
+    }
+}
+
+
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: center;
+    
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+.navegacion{
+    // las animaciones no funcionan con los displays
+    visibility: hidden;//evita que se muestre el menu en pantalla de celular
+    opacity: 0;// transparencia, va del 0 al 1 
+    transition: visibility .3s ease-in-out , opacity 0.5s linear;// se quiere animar visibility, se animara 3 segundos y  ease-in-out es un tipo de animacion
+    @include tablet{
+        display: flex;// hace que se vea de forma horizontal
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+    }
+    a{
+        color: $blanco;
+        text-decoration: none; // quita lo azul y marcado
+        font-size: 1.8rem;
+        display: block;
+         @include tablet{
+           margin-right: 2.2rem;
+             &:last-of-type{// quita el margin right al ultimo elemento de los a
+                 margin-right: 0;
+             }
+    }
+    }
+}
+//-------------menu de amburguesa-----------
+.mobile-menu{
+    @include tablet{
+        display: none;
+    }
+    img{
+        width: 50px;
+        
+    }
+}
+.mostrar{
+   visibility: visible;
+    opacity: 1;
+}

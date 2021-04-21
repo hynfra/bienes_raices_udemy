@@ -1,0 +1,17 @@
+.testimonial{
+    color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: $blanco;
+   /* blockquote{
+        padding-left: .5rem;
+        &::before{
+            content: '';// se usa esto cada vez se aplica un seudoelemento
+            background-image: url(../img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;// se debe poner un display 
+        }
+    }*/
+}

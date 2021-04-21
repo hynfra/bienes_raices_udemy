@@ -1,0 +1,41 @@
+.no-webp .inicio{
+    background-image: url(../img/header.jpg);
+}
+.webp .inicio{
+    background-image: url(../img/header.webp);
+}
+
+.header{
+    background-color: $grisOscuro; 
+    padding: 1rem 0rem 0rem;
+    &.inicio{
+        background-position: center center;
+        background-size: cover;
+        @include tablet{
+            min-height: 70rem;
+        }
+        .contenido-header{
+             @include tablet{// se necesita darle mas ancho para que el titulo de header baje 
+            min-height: 70rem;
+        }
+        }
+    }
+}
+.contenido-header{
+    display: flex;// permite usar los 2 comando de abajo
+    flex-direction: column;// alinea de abajo hacia arriba
+    justify-content: space-between; // agrega separacion 
+   
+    h1{
+        text-align: left;// alinea el titulo hacia la izquierda una vez alla bajado
+        color: $blanco;
+        font-weight: $bold;
+        line-height: 2;
+        max-width: 60rem;
+    }
+}
+.alerta{
+    &.error{
+         background-color: $rojo;   
+    }
+}

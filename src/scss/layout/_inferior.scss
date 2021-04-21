@@ -1,0 +1,45 @@
+@include tablet{
+    .seccion-inferior{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;   
+    }
+}
+.entrada-blog{
+    margin-bottom: 2rem;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    &::last-of-type{
+        margin-bottom: 0;
+    }
+}
+.informacion-meta{
+    span{
+        color: $amarillo;
+        
+    } 
+}
+.texto-entrada{
+    a{
+      color: $negro; 
+        //cuando no se aplica un comando suele ser por que no tiene el display indicado para dicho comando
+    //poner un margin aqui no se puede por que por defecto esta en display inline
+    }
+    h4{
+        // aca si se puede poner un margin porque los heading tienen display block
+       margin: 0;
+        line-height: 1.4;
+        &::after{//crea la barra verde debajo 
+            content: '';
+            display: block;
+            width: 15rem;
+            height: .5rem;
+            background-color: $verde;
+            margin-top: 1rem;
+        }
+    }
+   
+}

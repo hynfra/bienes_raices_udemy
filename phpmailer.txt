@@ -1,0 +1,3 @@
+
+phpmailer permite gestionar cuentas de correo, se debe instalar y crear cuenta en https://mailtrap.io/
+instalar : composer require phpmailer/phpmailer

@@ -1,0 +1,11 @@
+
+
+npm i --save-dev cypress // instala el programa
+
+npx cypress open // abre el programa
+
+npx cypress run  // registra todos los archivos spec
+
+describe('nombre', () =>{ // agrega un titulo a la pagina de prueba 
+
+/// <references types="cypress"  // usa el contenido de cypress.json, que es donde se coloca el enlace

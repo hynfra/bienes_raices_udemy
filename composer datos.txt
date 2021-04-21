@@ -1,0 +1,22 @@
+con composer init se crea el archivo composer.json
+
+para usar los namespaces y rutas (autoload) se debe poner lo siguiente:
+
+"autoload": {
+        "psr-4": {
+            "App\\" : "./clases"
+        }
+    }
+se pone psr-4
+y dentro donde estaran las clases osea en la carpeta clases
+
+se debe poner una , despues si se quiere agregar mas packages
+al finalizar se da a composer update en la terminal
+
+//esta clase debe ser enviada despues del autoload
+http://image.intervention.io/getting_started/installation // enlace de instalacion
+<-------require intervention/image ------------> // se usa en terminal con composer instalado
+debe tener las librerias:
+GD Library (>=2.0) … or …
+Imagick PHP extension (>=6.5.7)
+// con php.info() se puede saber si estan instaladas 
